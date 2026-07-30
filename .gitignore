@@ -1,0 +1,20 @@
+# 1. Ignore absolutely everything
+*
+
+# 2. Allow Git to traverse folders (required for it to find your files)
+!*/
+
+# 3. Explicitly ignore the hidden Visual Studio folder
+.vs/
+
+# 4. Allow only C source and header files
+!*.c
+!*.h
+
+# 5. Allow Visual Studio project files (so the project actually opens in VS)
+!*.sln
+!*.vcxproj
+!*.vcxproj.filters
+
+# 6. Allow this file itself
+!.gitignore
