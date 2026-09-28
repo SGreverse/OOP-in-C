@@ -6,7 +6,7 @@
 
 * **Inheritance:** I used struct embedding. By making the base `Animal` struct the very first member of the `Dog` and `Cat` structs, the memory aligns perfectly. This lets me safely cast pointers between derived and base types.
 * **Polymorphism (Dynamic Dispatch):** I built a custom v-table architecture. It uses macros (like `Poly_EAT` or `Poly_SLEEP`) to hide the messy function pointer casting,but the same code runs for dog, cat and animal yet different functions are called.
-* **Calling Super:** You can bypass the virtual table entirely to call base class methods directly from overridden methods, which works exactly like using `super()` in Java or C#.
+* **Calling Super:** You can bypass the virtual table entirely to call base class methods directly from overridden methods, which works exactly like using `super()` in Java or `base` in C#.
 * **Memory Management:** I wrote custom destructors that cascade the cleanup. For example, it ensures a cat's dynamically allocated array of kittens is completely freed before it moves on to free the base animal struct.
 
 ## Project Layout
